@@ -1,0 +1,56 @@
+<html>
+<head>
+<script>
+function other() {
+	var name = document.getElementById("date").value;
+	var name1 = document.getElementById("subject").value;
+	document.getElementById("oname").href ="viewAttendance.php?date="+name+"&subject="+name1;
+}
+</script>
+</head>
+<body>
+<center>
+<form action = "next.php" method = "post">
+<table>
+<tr><td><a href = "changePassword.php"><h4>ChangePassword</h4></a></td></tr>
+<tr>
+<th>Year</th><td><select name = "year">
+  <option value="first" >I</option>
+  <option value="second">II</option>
+  <option value="third">III</option>
+  <option value="fourth">IV</option>
+</select></td>
+</tr>
+
+<tr>
+<th>Branch </th><td><select name = "branch">
+  <option value="csea">CSE-A</option>
+  <option value="cseb">CSE-B</option>
+  <option value="ecea">ECE-A</option>
+  <option value="eceb">ECE-B</option>
+  <option value="eee">EEE</option>
+  <option value="it">IT</option>
+</select></td>
+</tr>
+<tr>
+<th>Subject</th><td><select name = "subject" id = "subject">
+  <option value="wt" >WT</option>
+  <option value="ooad">OOAD</option>
+  <option value="ia(1)">IA(1)</option>
+  <option value="stm">STM</option>
+  <option value="is">IS</option>
+  <option value="mefa">MEFA</option>
+</select></td>
+</tr>
+<tr>
+<th>Date:</th><td><input type = "date" name = "date" id = "date"></td>
+</tr>
+
+<tr>
+<td><input type = "submit" value = "next"></td><td><a id = "oname" onclick ="other();"><input type = "button" value = "ViewAttendance"></a></td>
+
+</tr>
+</form>
+</center>
+</body>
+</html>
